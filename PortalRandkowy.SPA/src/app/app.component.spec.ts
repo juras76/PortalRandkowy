@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'PortalRandkowy-SAP'`, () => {
+  it(`should have as title 'PortalRandkowy-SPA'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('PortalRandkowy-SAP');
+    expect(app.title).toEqual('PortalRandkowy-SPA');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('PortalRandkowy-SAP app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('PortalRandkowy-SPA app is running!');
   });
 });
