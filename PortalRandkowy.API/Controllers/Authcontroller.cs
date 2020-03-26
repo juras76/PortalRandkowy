@@ -14,7 +14,7 @@ namespace PortalRandkowy.API.Controllers
         public Authcontroller(IAuthRepository repository)
         {
             _repository = repository;
-        }
+        } 
 
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto) 
