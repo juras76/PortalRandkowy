@@ -14,11 +14,11 @@ namespace PortalRandkowy.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Authcontroller : ControllerBase
+    public class AuthController : ControllerBase
     {
         private readonly IAuthRepository _repository;
         private readonly IConfiguration _config;
-        public Authcontroller(IAuthRepository repository, IConfiguration config)
+        public AuthController(IAuthRepository repository, IConfiguration config)
         {
             _config = config;
             _repository = repository;
@@ -69,7 +69,6 @@ namespace PortalRandkowy.API.Controllers
             };
 
             var tokenHandler = new JwtSecurityTokenHandler();
-
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
             return Ok(new { token = tokenHandler.WriteToken(token)});
